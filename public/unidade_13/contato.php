@@ -1,4 +1,13 @@
-<?php require_once("../../conexao/conexao.php"); ?>
+<?php 
+    require_once("../../conexao/conexao.php");
+    require_once("./_incluir/funcoes.php"); 
+?>
+
+<?php 
+    if(isset($_POST['nome'])){
+        $sucesso = enviarMensagem($_POST);
+    }
+?>
 
 <!doctype html>
 <html>
@@ -24,8 +33,13 @@
                     <input type="submit" name="enviar" value="Enviar Mensagem">
                     
                     <?php
-                        if( isset($mensagem) ) {
-                            echo "<p>" . $mensagem . "</p>";
+                        if( isset($sucesso)) { 
+                            if($sucesso){
+                                echo "<p class='success'>Mensagem enviada com sucesso!</p>";
+                            }
+                            else{
+                                echo "<p class='fail'>Problema para enviar a mensagem</p>";
+                            }
                         }
                     ?>                     
                 </form>
