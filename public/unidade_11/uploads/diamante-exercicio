@@ -1,0 +1,26 @@
+Formato do diamante: 
+	altura - número de linhas
+	largura - quantidade de slots por linha
+	lógica: altura e largura devem possuir o mesmo valor
+	cada diamante é formado por *
+	cada linha tem (i+1)*2 asteriscos até a linha do meio
+	após a linha do meio é feito um decremento de 2 asteriscos até 
+	chegar a base do diamente (linha de numero igual a altura)
+
+5 ()
+
+--*-- ( (h - s) / 2; onde h é a ordem do diamante e s é quantidade de
+-***-  asteriscos da linha)
+*****
+-***-
+--*--
+
+7 ()
+
+---*--- (1o fica na posicao 4 (meio) )
+--***-- ()
+-*****-
+*******
+-*****-
+--***--
+---*---
